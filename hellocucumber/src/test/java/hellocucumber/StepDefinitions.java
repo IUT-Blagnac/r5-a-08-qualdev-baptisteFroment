@@ -10,25 +10,13 @@ public class StepDefinitions {
     private String today;
     private String actualAnswer;
 
-    @Given("an example scenario")
-    public void anExampleScenario() {
+    @Given("today is {string}")
+    public void today_is(String day) {
+        this.today = day;
     }
 
-    @When("all step definitions are implemented")
-    public void allStepDefinitionsAreImplemented() {
-    }
-
-    @Then("the scenario passes")
-    public void theScenarioPasses() {
-    }
-
-    @Given("it is Sunday")
-    public void it_is_sunday() {
-        this.today = "Sunday";
-    }
-
-    @When("I ask if it's Friday")
-    public void i_ask_if_it_s_friday() {
+    @When("I ask whether it's Friday yet")
+    public void i_ask_whether_it_s_Friday_yet() {
         this.actualAnswer = IsItFriday.isItFriday(today);
     }
 
@@ -36,17 +24,23 @@ public class StepDefinitions {
     public void i_should_be_told(String expectedAnswer) {
         assertEquals(expectedAnswer, actualAnswer);
     }
+    // Ajoutez ces méthodes à votre classe StepDefinitions
 
-    @Given("today is Friday")
-    public void today_is_Friday() {
-        this.today = "Friday";
+    @Given("an example scenario")
+    public void an_example_scenario() {
+        // Vous pouvez laisser cette méthode vide si elle ne nécessite pas d'action spécifique
     }
 
-    @When("I ask whether it's Friday yet")
-    public void i_ask_whether_it_s_Friday_yet() {
-        this.actualAnswer = IsItFriday.isItFriday(today);
+    @When("all step definitions are implemented")
+    public void all_step_definitions_are_implemented() {
+        // Vous pouvez laisser cette méthode vide si elle ne nécessite pas d'action spécifique
     }
-    
+
+    @Then("the scenario passes")
+    public void the_scenario_passes() {
+        // Vous pouvez laisser cette méthode vide si elle ne nécessite pas d'action spécifique
+    }
+
 }
 
 class IsItFriday {
