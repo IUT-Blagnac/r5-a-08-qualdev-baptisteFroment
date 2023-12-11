@@ -36,11 +36,25 @@ public class StepDefinitions {
     public void i_should_be_told(String expectedAnswer) {
         assertEquals(expectedAnswer, actualAnswer);
     }
+
+    @Given("today is Friday")
+    public void today_is_Friday() {
+        this.today = "Friday";
+    }
+
+    @When("I ask whether it's Friday yet")
+    public void i_ask_whether_it_s_Friday_yet() {
+        this.actualAnswer = IsItFriday.isItFriday(today);
+    }
     
 }
 
 class IsItFriday {
     static String isItFriday(String today) {
-        return "Friday".equalsIgnoreCase(today) ? "Yes" : "No";
+        if ("Friday".equalsIgnoreCase(today)) {
+            return "TGIF";
+        } else {
+            return "No";
+        }
     }
 }
