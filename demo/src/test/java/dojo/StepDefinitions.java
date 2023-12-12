@@ -8,15 +8,17 @@ import java.util.List;
 public class StepDefinitions {
     private Order order;
 
-    @Given("Romeo who wants to buy a drink")
-    public void romeo_who_wants_to_buy_a_drink() {
+    // Paramétrer le nom de la personne qui veut acheter le verre
+    @Given("^(.*) who wants to buy a drink$")
+    public void person_who_wants_to_buy_a_drink(String ownerName) {
         order = new Order();
-        order.declareOwner("Romeo");
+        order.declareOwner(ownerName);
     }
 
-    @When("an order is declared for Juliette")
-    public void an_order_is_declared_for_juliette() {
-        order.declareTarget("Juliette");
+    // Paramétrer le nom de la personne pour qui on commande le verre
+    @When("^an order is declared for (.*)$")
+    public void an_order_is_declared_for(String targetName) {
+        order.declareTarget(targetName);
     }
 
     @Then("there is no cocktail in the order")
@@ -24,4 +26,7 @@ public class StepDefinitions {
         List<String> cocktails = order.getCocktails();
         assertEquals(0, cocktails.size());
     }
+
+    // Scénario pour paramétrer le nombre de cocktails
+    // Ajoutez un nouveau scénario dans le fichier de feature et une méthode correspondante ici
 }
