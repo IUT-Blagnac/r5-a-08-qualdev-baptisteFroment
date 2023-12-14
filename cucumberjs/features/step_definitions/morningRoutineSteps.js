@@ -28,7 +28,6 @@ Then('I read the top headlines from {string}', function (newsSource) {
   assert.ok(true, `Headlines from ${newsSource} read.`);
 });
 
-// Scénario 2
 Given('I am dressed in {string}', function (exerciseAttire) {
   console.log(`Dressed in ${exerciseAttire} for morning exercise.`);
 });
