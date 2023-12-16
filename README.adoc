@@ -172,3 +172,27 @@ L'objectif de ce TP était de mettre en place des tests pour une feature donnée
 Voici le résultat des tests :
 
 image::tp3.png[width=80%]
+
+
+== TP4
+
+Rapport de test au format txt : 
+
+[source,shell]
+----
+include::report.txt[]
+----
+
+On peut également publier le rapport de test au format html :
+
+Voici le résultat des tests :
+
+image::tp4.png[width=80%]
+image::tp4-2.png[width=80%]
+
+
+Lien vers le rapport de test au format html en utilisant cukedoctor :
+link:URL[https://htmlpreview.github.io/?https://github.com/IUT-Blagnac/r5-a-08-qualdev-baptisteFroment/blob/main/hellocucumber/target/cukedoctor/documentation.html documentation]
+
+
+
