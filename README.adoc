@@ -192,7 +192,7 @@ image::tp4-2.png[width=80%]
 
 
 Lien vers le rapport de test au format html en utilisant cukedoctor :
-link:URL[https://htmlpreview.github.io/?https://github.com/IUT-Blagnac/r5-a-08-qualdev-baptisteFroment/blob/main/hellocucumber/target/cukedoctor/documentation.html documentation]
+link:URL[https://htmlpreview.github.io/?https://github.com/IUT-Blagnac/r5-a-08-qualdev-baptisteFroment/blob/main/hellocucumber/src/documentation.html]
 
 
 
